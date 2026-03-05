@@ -19,15 +19,20 @@ const DATA_DIR = path.join(__dirname, "data");
 const MENU_FILE = path.join(DATA_DIR, "menu.json");
 const ORDERS_FILE = path.join(DATA_DIR, "orders.json");
 
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || "admin";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "admin123";
-const PAGE_USERNAME = process.env.MESSENGER_PAGE_USERNAME || "yourrestaurantpage";
-const PAGE_URL = process.env.MESSENGER_PAGE_URL || "";
-const MESSENGER_MODE = process.env.MESSENGER_MODE || "deeplink";
-const MESSENGER_PAGE_ACCESS_TOKEN = process.env.MESSENGER_PAGE_ACCESS_TOKEN || "";
-const MESSENGER_RECIPIENT_ID = process.env.MESSENGER_RECIPIENT_ID || "";
-const SUPABASE_URL = process.env.SUPABASE_URL || "";
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+const envValue = (value, fallback = "") => {
+  const next = String(value ?? "").trim();
+  return next || fallback;
+};
+
+const ADMIN_USERNAME = envValue(process.env.ADMIN_USERNAME, "admin");
+const ADMIN_PASSWORD = envValue(process.env.ADMIN_PASSWORD, "admin123");
+const PAGE_USERNAME = envValue(process.env.MESSENGER_PAGE_USERNAME, "yourrestaurantpage");
+const PAGE_URL = envValue(process.env.MESSENGER_PAGE_URL);
+const MESSENGER_MODE = envValue(process.env.MESSENGER_MODE, "deeplink").toLowerCase();
+const MESSENGER_PAGE_ACCESS_TOKEN = envValue(process.env.MESSENGER_PAGE_ACCESS_TOKEN);
+const MESSENGER_RECIPIENT_ID = envValue(process.env.MESSENGER_RECIPIENT_ID);
+const SUPABASE_URL = envValue(process.env.SUPABASE_URL);
+const SUPABASE_SERVICE_ROLE_KEY = envValue(process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 const supabaseAdmin =
   SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY
