@@ -1,0 +1,89 @@
+{
+  "categories": [
+    "Meals",
+    "Drinks",
+    "Snacks",
+    "Desserts"
+  ],
+  "items": [
+    {
+      "id": "meal-burger-classic",
+      "name": "Classic Chicken Burger",
+      "description": "Crispy chicken fillet, lettuce, tomato, and house sauce.",
+      "price": 149,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80",
+      "category": "Meals",
+      "enabled": true,
+      "addons": [
+        {
+          "id": "addon-extra-cheese",
+          "name": "Extra Cheese",
+          "price": 25
+        },
+        {
+          "id": "addon-bacon",
+          "name": "Bacon",
+          "price": 35
+        }
+      ]
+    },
+    {
+      "id": "meal-rice-bowl",
+      "name": "BBQ Rice Bowl",
+      "description": "Smoky BBQ chicken over garlic rice.",
+      "price": 179,
+      "image": "https://images.unsplash.com/photo-1604909052743-94e838986d24?auto=format&fit=crop&w=900&q=80",
+      "category": "Meals",
+      "enabled": true,
+      "addons": [
+        {
+          "id": "addon-extra-rice",
+          "name": "Extra Rice",
+          "price": 30
+        }
+      ]
+    },
+    {
+      "id": "drink-iced-tea",
+      "name": "Iced Tea",
+      "description": "Fresh brewed black tea with lemon.",
+      "price": 59,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=80",
+      "category": "Drinks",
+      "enabled": true,
+      "addons": [
+        {
+          "id": "addon-large-size",
+          "name": "Large Size",
+          "price": 20
+        }
+      ]
+    },
+    {
+      "id": "snack-fries",
+      "name": "Crispy Fries",
+      "description": "Golden potato fries with sea salt.",
+      "price": 89,
+      "image": "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=900&q=80",
+      "category": "Snacks",
+      "enabled": true,
+      "addons": [
+        {
+          "id": "addon-cheese-dip",
+          "name": "Cheese Dip",
+          "price": 25
+        }
+      ]
+    },
+    {
+      "id": "dessert-brownie",
+      "name": "Fudge Brownie",
+      "description": "Chocolate brownie with dark ganache.",
+      "price": 95,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+      "category": "Desserts",
+      "enabled": true,
+      "addons": []
+    }
+  ]
+}
